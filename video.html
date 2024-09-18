@@ -120,7 +120,7 @@
 									navigator.mozGetUserMedia || navigator.msGetUserMedia;
 		
 		// Open video capture stream
-		navigator.getUserMedia({video:{mandatory:{minWidth:vidw,maxWidth:vidw,minHeight:vidh,maxHeight:vidh}}}, function(stream)
+		navigator.getUserMedia({video:{mandatory:{minWidth:vidw,maxWidth:vidw,minHeight:vidh,maxHeight:vidh, facingMode: "environment"}}}, function(stream)
 		{
 			//vid.src = window.URL.createObjectURL(stream);
 			vid.srcObject=stream;
